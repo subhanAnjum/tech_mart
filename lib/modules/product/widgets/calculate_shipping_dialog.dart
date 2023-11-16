@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_mart/common/widgets/app_button.dart';
 import 'package:tech_mart/common/widgets/app_drop_down_button.dart';
 import 'package:tech_mart/common/widgets/blue_black_shader.dart';
+import 'package:tech_mart/utils/app_colors.dart';
 import 'package:tech_mart/utils/app_textstyle.dart';
 import 'package:tech_mart/utils/extentions.dart';
 
@@ -55,7 +56,10 @@ class CalculateShippingDialog extends StatelessWidget {
                 onChanges: (p0) {},
                 items: ['USA', 'QATAR', 'UAE']
                     .map((e) => DropdownMenuItem(
-                          child: Text(e),
+                          child: Text(
+                            e,
+                            style: TextStyle(color: AppColors.grey),
+                          ),
                           value: e,
                         ))
                     .toList(),
@@ -67,7 +71,10 @@ class CalculateShippingDialog extends StatelessWidget {
                 onChanges: (p0) {},
                 items: ['Dubai', 'Riyadh', 'Sharjah']
                     .map((e) => DropdownMenuItem(
-                          child: Text(e),
+                          child: Text(
+                            e,
+                            style: TextStyle(color: AppColors.grey),
+                          ),
                           value: e,
                         ))
                     .toList(),

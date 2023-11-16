@@ -7,7 +7,7 @@ import 'blue_smooth_shader_mask.dart';
 
 PreferredSize customAppBar({String? title, List<Widget>? actions}) {
   return PreferredSize(
-    preferredSize: Size.fromHeight(kToolbarHeight.h),
+    preferredSize: Size.fromHeight(60.h),
     child: Container(
       color: AppColors.systemColor,
       child: SafeArea(

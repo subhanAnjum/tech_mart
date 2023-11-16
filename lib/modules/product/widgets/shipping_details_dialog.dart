@@ -7,6 +7,7 @@ import 'package:tech_mart/utils/app_textstyle.dart';
 import 'package:tech_mart/utils/extentions.dart';
 
 import '../../../common/widgets/price_selection_input.dart';
+import '../../../utils/app_colors.dart';
 
 class ShippingDetailsDialog extends StatelessWidget {
   const ShippingDetailsDialog({
@@ -60,7 +61,10 @@ class ShippingDetailsDialog extends StatelessWidget {
                   onChanges: (p0) {},
                   items: ['USA', 'QATAR', 'UAE']
                       .map((e) => DropdownMenuItem(
-                            child: Text(e),
+                            child: Text(
+                              e,
+                              style: TextStyle(color: AppColors.grey),
+                            ),
                             value: e,
                           ))
                       .toList(),
@@ -72,7 +76,10 @@ class ShippingDetailsDialog extends StatelessWidget {
                   onChanges: (p0) {},
                   items: ['Dubai', 'Riyadh', 'Sharjah']
                       .map((e) => DropdownMenuItem(
-                            child: Text(e),
+                            child: Text(
+                              e,
+                              style: TextStyle(color: AppColors.grey),
+                            ),
                             value: e,
                           ))
                       .toList(),

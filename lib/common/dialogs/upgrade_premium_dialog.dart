@@ -26,66 +26,85 @@ class _UpgradePremiumDialogState extends State<UpgradePremiumDialog> {
           borderRadius: BorderRadius.circular(20.0.w),
           color: Colors.white,
         ),
-        padding: EdgeInsets.fromLTRB(30.w, 30.h, 24.w, 62.h),
         width: double.infinity,
-        child: ListView(
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisSize: MainAxisSize.min,
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
+        height: 431.h,
+        alignment: Alignment.topCenter,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Stack(
-              clipBehavior: Clip.none,
-              alignment: Alignment.centerLeft,
+            20.verticalSpace,
+            Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    BlueBlackShaderMask(
-                        child: Text(
-                      'Upgrade to Premium',
-                      style:
-                          AppTextStyle.mediumBlack30.copyWith(fontSize: 30.h),
-                    )),
-                  ],
-                ),
-                Positioned(
-                  left: -17.w,
-                  top: -10.h,
-                  child: const BackButton(),
+                BackButton(
+                  style: IconButton.styleFrom(
+                      visualDensity: VisualDensity(vertical: -4)),
                 )
               ],
             ),
-            20.verticalSpace,
-            Text(
-              'Your Feature service order has been confirmed. You have opted to feature your product for \$25.00 for next 24 hours',
-              textAlign: TextAlign.center,
-              style: AppTextStyle.mediumBlack12.copyWith(
-                color: AppColors.lightBlack,
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.fromLTRB(30.w, 0.h, 24.w, 62.h),
+
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisSize: MainAxisSize.min,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                children: [
+                  Stack(
+                    clipBehavior: Clip.none,
+                    alignment: Alignment.centerLeft,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          BlueBlackShaderMask(
+                              child: Text(
+                            'Upgrade to Premium',
+                            style: AppTextStyle.mediumBlack30
+                                .copyWith(fontSize: 30.h),
+                          )),
+                        ],
+                      ),
+                      // Positioned(
+                      //   left: -17.w,
+                      //   top: -10.h,
+                      //   child: const ,
+                      // )
+                    ],
+                  ),
+                  20.verticalSpace,
+                  Text(
+                    'Your Feature service order has been confirmed. You have opted to feature your product for \$25.00 for next 24 hours',
+                    textAlign: TextAlign.center,
+                    style: AppTextStyle.mediumBlack14.copyWith(
+                      color: AppColors.blueGrey.withOpacity(0.87),
+                    ),
+                  ),
+                  35.verticalSpace,
+                  AppButton(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    text: 'Upgrade to Premium',
+                    faded: false,
+                    height: 62.h,
+                    width: 300.w,
+                    style: AppTextStyle.mediumBlack18,
+                  ),
+                  15.verticalSpace,
+                  AppButton(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    inversed: true,
+                    text: 'Cancle',
+                    faded: false,
+                    height: 62.h,
+                    width: 300.w,
+                    style: AppTextStyle.mediumBlack18,
+                  ),
+                ],
               ),
-            ),
-            35.verticalSpace,
-            AppButton(
-              onPressed: () {
-                context.pop();
-              },
-              text: 'Upgrade to Premium',
-              faded: false,
-              height: 62.h,
-              width: 300.w,
-              style: AppTextStyle.mediumBlack18,
-            ),
-            15.verticalSpace,
-            AppButton(
-              onPressed: () {
-                context.pop();
-              },
-              inversed: true,
-              text: 'Cancle',
-              faded: false,
-              height: 62.h,
-              width: 300.w,
-              style: AppTextStyle.mediumBlack18,
             ),
           ],
         ),

@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
                   backgroundColor: Colors.transparent,
                   foregroundColor: AppColors.blue,
                   titleTextStyle: AppTextStyle.mediumBlack18.copyWith(
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w500,
                     fontSize: 18.h,
                   ),
                   surfaceTintColor: Colors.transparent,

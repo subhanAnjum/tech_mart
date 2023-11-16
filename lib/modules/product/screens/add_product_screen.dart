@@ -64,7 +64,15 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   17.verticalSpace,
                   AppDropDownButton(
                     hintText: '',
-                    items: [],
+                    items: ['Dubai', 'Riyadh', 'Sharjah']
+                        .map((e) => DropdownMenuItem(
+                              child: Text(
+                                e,
+                                style: TextStyle(color: AppColors.grey),
+                              ),
+                              value: e,
+                            ))
+                        .toList(),
                     onChanges: (p0) {},
                     lable: 'Category',
                     lableStyle: AppTextStyle.mediumBlack16,
@@ -72,7 +80,15 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   27.verticalSpace,
                   AppDropDownButton(
                     hintText: '',
-                    items: [],
+                    items: ['Dubai', 'Riyadh', 'Sharjah']
+                        .map((e) => DropdownMenuItem(
+                              child: Text(
+                                e,
+                                style: TextStyle(color: AppColors.grey),
+                              ),
+                              value: e,
+                            ))
+                        .toList(),
                     onChanges: (p0) {},
                     lable: 'Store Category',
                     lableStyle: AppTextStyle.mediumBlack16,

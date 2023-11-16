@@ -37,6 +37,13 @@ class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController searchC = TextEditingController();
   @override
   void dispose() {
+    isSearching = false;
+    isSorting = false;
+
+    if (overlayEntry != null) {
+      overlayEntry?.remove();
+      overlayEntry = null;
+    }
     searchC.dispose();
     super.dispose();
   }
@@ -182,7 +189,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             vertical: 20.0.h, horizontal: 55.0.w),
                         child: Column(
                           children: [
-                            40.verticalSpace,
+                            100.verticalSpace,
                             Image.asset(
                               AppImages.confusedRobot,
                               height: 230.h,
@@ -206,7 +213,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   'Search usernames for: \'${value.text}\'',
                                   style: AppTextStyle.mediumBlack14.responsive
                                       .copyWith(
-                                    color: AppColors.blue,
+                                    color: AppColors.lightBlue,
                                   ),
                                 ))
                           ],

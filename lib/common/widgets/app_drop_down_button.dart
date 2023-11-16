@@ -61,7 +61,7 @@ class AppDropDownButton extends StatelessWidget {
             useSafeArea: false,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(16.w),
+              borderRadius: BorderRadius.circular(8.w),
             ),
             padding: EdgeInsets.zero,
           ),

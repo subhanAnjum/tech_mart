@@ -36,7 +36,7 @@ class SearchTextField extends StatefulWidget {
 
 class _SearchTextFieldState extends State<SearchTextField> {
   final FocusNode _focusNode = FocusNode();
-  late OverlayEntry _overlayEntry;
+  OverlayEntry? _overlayEntry;
 
   @override
   void initState() {
@@ -47,9 +47,9 @@ class _SearchTextFieldState extends State<SearchTextField> {
         }
         if (_focusNode.hasFocus) {
           _overlayEntry = _createOverlayEntry();
-          Overlay.of(context).insert(_overlayEntry);
+          Overlay.of(context).insert(_overlayEntry!);
         } else {
-          _overlayEntry.remove();
+          _overlayEntry?.remove();
         }
       });
     }
@@ -58,6 +58,9 @@ class _SearchTextFieldState extends State<SearchTextField> {
 
   @override
   void dispose() {
+    _focusNode.unfocus();
+    if (_overlayEntry != null) _overlayEntry?.remove();
+
     if (widget.withOverlay) {
       _focusNode.removeListener(() {
         if (widget.onFocusChange != null) {
