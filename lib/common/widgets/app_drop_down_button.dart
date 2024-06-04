@@ -1,5 +1,4 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_mart/utils/extentions.dart';
@@ -85,7 +84,7 @@ class AppDropDownButton extends StatelessWidget {
                       )))
                   .toList() ??
               [] as List<Widget>,
-          underline: SizedBox(),
+          underline: const SizedBox(),
           // iconSize: 14.w,
           // icon: const Icon(CupertinoIcons.chevron_down),
           value: value,
@@ -100,21 +99,33 @@ class AppDropDownButton extends StatelessWidget {
                       enabled: items![i].enabled,
                       onTap: items![i].onTap,
                       alignment: items![i].alignment,
-                      child: Padding(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                          width: 1.h,
+                          color: (i + 1) == items!.length
+                              ? Colors.transparent
+                              : AppColors.grey.withOpacity(0.3),
+                        ))),
                         padding: EdgeInsets.symmetric(horizontal: 15.0.w),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             5.verticalSpace,
-                            items![i].child,
-                            5.verticalSpace,
-                            Divider(
-                              height: 1.h,
-                              color: (i + 1) == items!.length
-                                  ? Colors.transparent
-                                  : AppColors.grey.withOpacity(0.3),
+                            Row(
+                              children: [
+                                items![i].child,
+                              ],
                             ),
+                            5.verticalSpace,
+                            // Divider(
+                            //   height: 1.h,
+                            //   color: (i + 1) == items!.length
+                            //       ? Colors.transparent
+                            //       : AppColors.grey.withOpacity(0.3),
+                            // ),
                           ],
                         ),
                       ),

@@ -76,7 +76,7 @@ class CategoryScreen extends StatelessWidget {
                   elevation: 0,
                   color: Colors.transparent,
                   child: InkWell(
-                    onTap: () => SubCategoryScreen().push(context),
+                    onTap: () => const SubCategoryScreen().push(context),
                     child: Container(
                       margin: EdgeInsets.fromLTRB(10.w, 0, 16.w, 10.h),
                       height: 62.h,

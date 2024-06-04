@@ -48,6 +48,8 @@ dependencies:
   dotted_border: ^2.1.0
   dropdown_button2: ^2.3.9
   audioplayers: ^5.2.1
+  cloud_firestore: ^4.15.8
+  firebase_core: ^2.27.0
 
 dev_dependencies:
   flutter_test:

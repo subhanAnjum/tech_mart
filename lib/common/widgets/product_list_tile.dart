@@ -181,8 +181,7 @@ class ProductListTile extends StatelessWidget {
                       children: [
                         BlueBlackShaderMask(
                           child: Text(
-                            product.title +
-                                'Lorem ipsum dolor sit amet consectetur.',
+                            '${product.title}Lorem ipsum dolor sit amet consectetur.',
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: AppTextStyle.mediumBlack14.responsive,

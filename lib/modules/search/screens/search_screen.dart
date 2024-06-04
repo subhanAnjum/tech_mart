@@ -230,7 +230,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                       : 0),
                           shrinkWrap: true,
                           children: [
-                            55.verticalSpace,
+                            60.verticalSpace,
                             //search field
                             20.verticalSpace,
                             //image gallery
@@ -466,6 +466,16 @@ class _SearchScreenState extends State<SearchScreen> {
                         showProductsView = false;
                       }),
                       onTapFilter: () {
+                        setState(() {
+                          isSearching = false;
+                          isSorting = false;
+                        });
+                        FocusScope.of(context).unfocus();
+
+                        if (overlayEntry != null) {
+                          overlayEntry?.remove();
+                          overlayEntry = null;
+                        }
                         globalScaffoldKey.currentState!.openEndDrawer();
                       },
                       padding: EdgeInsets.only(

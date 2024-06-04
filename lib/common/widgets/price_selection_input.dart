@@ -70,13 +70,13 @@ class _PriceSelectionInputState extends State<PriceSelectionInput> {
                   },
                   items: selections
                       .map((e) => DropdownMenuItem(
+                            value: e,
                             child: Text(
                               e,
-                              style: TextStyle(
+                              style: const TextStyle(
                                       fontSize: 14, color: Colors.blueGrey)
                                   .responsive,
                             ),
-                            value: e,
                           ))
                       .toList(),
                   hintText: ''),

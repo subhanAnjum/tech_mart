@@ -37,7 +37,7 @@ class _UpgradePremiumDialogState extends State<UpgradePremiumDialog> {
               children: [
                 BackButton(
                   style: IconButton.styleFrom(
-                      visualDensity: VisualDensity(vertical: -4)),
+                      visualDensity: const VisualDensity(vertical: -4)),
                 )
               ],
             ),
@@ -48,7 +48,7 @@ class _UpgradePremiumDialogState extends State<UpgradePremiumDialog> {
                 // crossAxisAlignment: CrossAxisAlignment.start,
                 // mainAxisSize: MainAxisSize.min,
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
                   Stack(
                     clipBehavior: Clip.none,

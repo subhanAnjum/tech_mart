@@ -20,7 +20,12 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
-  final screens = [HomeScreen(), SearchScreen(), Scaffold(), Scaffold()];
+  final screens = [
+    const HomeScreen(),
+    const SearchScreen(),
+    const Scaffold(),
+    const Scaffold()
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +36,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
           key: globalScaffoldKey,
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
-          endDrawer: FilterView(),
+          endDrawer: const FilterView(),
           body: Stack(
             alignment: Alignment.bottomCenter,
             children: [

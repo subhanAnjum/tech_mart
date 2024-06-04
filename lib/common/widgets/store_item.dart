@@ -131,7 +131,7 @@ class StoretItem extends StatelessWidget {
             child: Container(
               height: 34.h,
               width: 34.w,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: AppColors.lightBlue, shape: BoxShape.circle),
               alignment: Alignment.center,
               child: Icon(

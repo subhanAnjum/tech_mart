@@ -49,7 +49,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
           _overlayEntry = _createOverlayEntry();
           Overlay.of(context).insert(_overlayEntry!);
         } else {
-          _overlayEntry?.remove();
+          if (_overlayEntry != null) _overlayEntry?.remove();
         }
       });
     }
@@ -177,7 +177,7 @@ class _SearchTextFieldState extends State<SearchTextField> {
                 20.horizontal,
                 GestureDetector(
                   onTap: widget.onTapFilter,
-                  child: Container(
+                  child: SizedBox(
                     height: 16.w,
                     width: 16.w,
                     child: Image(

@@ -77,7 +77,7 @@ class _ProductItemState extends State<ProductItem> {
               },
               onTap: widget.onTap ??
                   () {
-                    ProductDetailsScreen().push(context);
+                    const ProductDetailsScreen().push(context);
                   },
               child: Container(
                 padding: EdgeInsets.all(5.0.w),
@@ -247,7 +247,7 @@ class _ProductItemState extends State<ProductItem> {
             Container(
               height: 22.h,
               width: 79.w,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: AppColors.goldenGradient,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10.0),
@@ -292,7 +292,8 @@ class _ProductItemState extends State<ProductItem> {
           //reaction pop up
           if (showReactions)
             FutureBuilder<bool>(
-                future: Future.delayed(Duration(milliseconds: 50), () => true),
+                future: Future.delayed(
+                    const Duration(milliseconds: 50), () => true),
                 builder: (context, snapshot) {
                   final completedFuture = snapshot.data ?? false;
                   return Positioned(
@@ -300,7 +301,7 @@ class _ProductItemState extends State<ProductItem> {
                     right: 0,
                     child: AnimatedOpacity(
                       opacity: (showReactions && completedFuture) ? 1 : 0,
-                      duration: Duration(
+                      duration: const Duration(
                         milliseconds: 200,
                       ),
                       child: Container(
@@ -349,10 +350,11 @@ class _ProductItemState extends State<ProductItem> {
                                 AppImages.reaction_angry,
                               ),
                             ].map((e) {
-                              final onTap = () {
+                              onTap() {
                                 _reactionTapped(e.value);
                                 Helper.playReactionSound();
-                              };
+                              }
+
                               return ReactionIcon(
                                 onTap: onTap,
                                 imagePath: e.imagePath,

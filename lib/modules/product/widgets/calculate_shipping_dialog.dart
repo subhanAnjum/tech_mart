@@ -58,7 +58,7 @@ class CalculateShippingDialog extends StatelessWidget {
                     .map((e) => DropdownMenuItem(
                           child: Text(
                             e,
-                            style: TextStyle(color: AppColors.grey),
+                            style: TextStyle(color: AppColors.grey).responsive,
                           ),
                           value: e,
                         ))
@@ -73,7 +73,7 @@ class CalculateShippingDialog extends StatelessWidget {
                     .map((e) => DropdownMenuItem(
                           child: Text(
                             e,
-                            style: TextStyle(color: AppColors.grey),
+                            style: TextStyle(color: AppColors.grey).responsive,
                           ),
                           value: e,
                         ))

@@ -42,20 +42,21 @@ class _CountryScreenState extends State<CountryScreen> {
               imagePath: imagePath,
               onTap: () {
                 showDialog(
-                    context: context, builder: (_) => UpgradePremiumDialog());
+                    context: context,
+                    builder: (_) => const UpgradePremiumDialog());
               },
               title: title,
               isPremium: isPremium,
               trailing: trailing),
           20.verticalSpace,
-          Divider(
+          const Divider(
             color: AppColors.grey,
           ),
           20.verticalSpace,
           ListView.separated(
             shrinkWrap: true,
             padding: padding,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: 10,
             itemBuilder: (_, index) => CountryTile(
               onTap: () {

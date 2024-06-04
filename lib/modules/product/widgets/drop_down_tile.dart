@@ -1,11 +1,9 @@
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_mart/common/widgets/app_drop_down_button.dart';
 import 'package:tech_mart/utils/extentions.dart';
 
 import '../../../common/widgets/blue_black_shader.dart';
-import '../../../utils/app_colors.dart';
 import '../../../utils/app_textstyle.dart';
 
 class DropDownTile extends StatelessWidget {

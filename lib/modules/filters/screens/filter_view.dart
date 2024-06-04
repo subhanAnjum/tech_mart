@@ -61,10 +61,12 @@ class _FilterViewState extends State<FilterView> {
                     onPressed: () {},
                     style: TextButton.styleFrom(
                         visualDensity:
-                            VisualDensity(horizontal: -4, vertical: -4)),
+                            const VisualDensity(horizontal: -4, vertical: -4)),
                     child: Text(
                       'Clear All',
-                      style: TextStyle(color: AppColors.lightBlue).responsive,
+                      style: const TextStyle(
+                              color: AppColors.lightBlue, fontSize: 15)
+                          .responsive,
                     )),
               ],
             ),
@@ -108,7 +110,7 @@ class _FilterViewState extends State<FilterView> {
           ),
           FilterTile(
             title: 'Price',
-            options: [],
+            options: const [],
             onSelection: (p0) {},
             children: [
               Padding(
@@ -132,23 +134,23 @@ class _FilterViewState extends State<FilterView> {
                         .responsive,
                     items: [
                       DropdownMenuItem(
+                        value: 'QAR',
                         child: Text(
                           'QAR',
-                          style: TextStyle(fontSize: 12).responsive,
+                          style: const TextStyle(fontSize: 12).responsive,
                         ),
-                        value: 'QAR',
                       ),
                       DropdownMenuItem(
+                        value: 'PKR',
                         child: Text(
                           'PKR',
-                          style: TextStyle(fontSize: 12).responsive,
+                          style: const TextStyle(fontSize: 12).responsive,
                         ),
-                        value: 'PKR',
                       ),
                       DropdownMenuItem(
-                        child: Text('USD',
-                            style: TextStyle(fontSize: 12).responsive),
                         value: 'USD',
+                        child: Text('USD',
+                            style: const TextStyle(fontSize: 12).responsive),
                       ),
                     ],
                     onChanged: (value) {}),
@@ -162,7 +164,7 @@ class _FilterViewState extends State<FilterView> {
                       child: PriceDropDown(
                         lable: 'Min. Price',
                         selectedValue: '100',
-                        options: ['No Max', '100', '200'],
+                        options: const ['No Max', '100', '200'],
                         onChanged: (p0) {},
                       ),
                     )
@@ -178,7 +180,7 @@ class _FilterViewState extends State<FilterView> {
                       child: PriceDropDown(
                         lable: 'Max. Price',
                         selectedValue: '100',
-                        options: ['No Max', '100', '200'],
+                        options: const ['No Max', '100', '200'],
                         onChanged: (p0) {},
                       ),
                     )

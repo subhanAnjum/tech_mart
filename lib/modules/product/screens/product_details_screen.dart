@@ -71,7 +71,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     ))),
             Positioned(
                 left: 78.w,
-                top: kToolbarHeight.h + 65.w,
+                top: 60.h + 65.w,
                 width: 155.w,
                 child: Material(
                   color: Colors.transparent,
@@ -195,7 +195,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen>
                     ))),
             Positioned(
                 left: 190.w,
-                top: kToolbarHeight.h + 65.w,
+                top: 60.h + 65.w,
                 width: 155.w,
                 child: Material(
                   color: Colors.transparent,

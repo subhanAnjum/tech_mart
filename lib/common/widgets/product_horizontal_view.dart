@@ -79,7 +79,7 @@ class ProductHorizontalView extends StatelessWidget {
                           horizontalOffset: 10,
                           child: ProductItem(
                               onReactionTap: (p0) {
-                                print('reaction selected: $p0');
+                                debugPrint('reaction selected: $p0');
                               },
                               imageUrl: product.imageUrl,
                               imageCount: product.imageCount,

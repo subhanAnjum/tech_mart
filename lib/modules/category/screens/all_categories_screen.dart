@@ -55,15 +55,15 @@ class AllCategoriesScreen extends StatelessWidget {
                   padding: EdgeInsets.only(left: 20.0.w, right: 20.0.w),
                   children: [
                     ...List.generate(11, (index) {
-                      final imageUrl = AppImages.gpu;
-                      final lable = 'Graphic Cards';
+                      const imageUrl = AppImages.gpu;
+                      const lable = 'Graphic Cards';
                       return StaggeredGrid(
                           columnCount: 3,
                           position: index,
                           child: CategoryItem(
                             imageUrl: imageUrl,
                             lable: lable,
-                            onTap: () => CategoryScreen().push(context),
+                            onTap: () => const CategoryScreen().push(context),
                           ));
                     }),
                   ],

@@ -65,21 +65,19 @@ class _PriceDropDownState extends State<PriceDropDown> {
             child: DropdownButtonFormField2<String>(
                 isExpanded: true,
                 focusNode: _focusNode,
-                selectedItemBuilder: (context) =>
-                    widget.options
-                        ?.map((e) => Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                BlueBlackShaderMask(
-                                    child: Text(
-                                  widget.selectedValue?.toString() ?? '',
-                                  style: AppTextStyle.regularBlack12.responsive
-                                      .copyWith(color: AppColors.blue),
-                                )),
-                              ],
-                            ))
-                        .toList() ??
-                    [] as List<Widget>,
+                selectedItemBuilder: (context) => widget.options
+                    .map((e) => Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BlueBlackShaderMask(
+                                child: Text(
+                              widget.selectedValue?.toString() ?? '',
+                              style: AppTextStyle.regularBlack12.responsive
+                                  .copyWith(color: AppColors.blue),
+                            )),
+                          ],
+                        ))
+                    .toList(),
                 dropdownStyleData: DropdownStyleData(
                     offset: Offset(0, -10.h),
                     maxHeight: 160.h,
@@ -92,14 +90,14 @@ class _PriceDropDownState extends State<PriceDropDown> {
                     )),
                 value: widget.selectedValue,
                 // underline: const SizedBox(),
-                decoration: InputDecoration(border: InputBorder.none),
+                decoration: const InputDecoration(border: InputBorder.none),
                 items: widget.options
                     .map((e) => DropdownMenuItem(
+                          value: e,
                           child: Text(
                             e,
-                            style: TextStyle(fontSize: 12).responsive,
+                            style: const TextStyle(fontSize: 12).responsive,
                           ),
-                          value: e,
                         ))
                     .toList(),
                 onChanged: widget.onChanged),

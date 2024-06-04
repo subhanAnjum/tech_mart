@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class BounceAnimator extends StatefulWidget {
@@ -30,7 +32,7 @@ class _BounceAnimator extends State<BounceAnimator>
 
   @override
   Widget build(BuildContext context) {
-    print('bounce');
+    log('bounce');
     return ScaleTransition(
       scale: Tween(begin: 1.0, end: 1.5).animate(
           CurvedAnimation(parent: _controller, curve: Curves.bounceInOut)),
