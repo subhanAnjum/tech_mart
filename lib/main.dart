@@ -20,7 +20,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -37,12 +36,6 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
               fontFamily: 'Lato',
               textTheme: GoogleFonts.latoTextTheme()
-              // .apply(
-              //   fontSizeFactor: 1,
-              //   fontFamily: 'Lato',
-              //   bodyColor: AppColors.black,
-              //   displayColor: AppColors.black,
-              // )
               ,
               scaffoldBackgroundColor: AppColors.bgColor,
               appBarTheme: AppBarTheme(
